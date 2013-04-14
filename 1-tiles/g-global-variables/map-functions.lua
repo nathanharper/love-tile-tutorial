@@ -1,5 +1,4 @@
 local sprite
-local sx,sy = 0,0
 
 function loadMap(path)
   love.filesystem.load(path)() -- attention! extra parenthesis
@@ -36,10 +35,5 @@ function newMap(tileWidth, tileHeight, tilesetPath, tileString, quadInfo)
 end
 
 function drawMap()
-  love.graphics.draw(sprite,sx,sy)
-end
-
-function updateMap(dx,dy)
-    sx = sx+dx
-    sy = sy+dy
+  love.graphics.draw(sprite)
 end
